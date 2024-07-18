@@ -7,11 +7,8 @@ frontend/dist/
 
 # Miscellaneous
 train/
-oo.md
 output copy.xlsx
-output_20240716T025039004Z.xlsx
-output_20240716T025046440Z.xlsx
-output_20240716T082402890Z.xlsx
+output_*.xlsx
 output.xlsx
 train.zip
 updates.csv
