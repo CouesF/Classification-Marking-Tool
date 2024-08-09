@@ -162,9 +162,9 @@ app.post('/set-data', (req, res) => {
         if (hallType !== undefined) row.hallType = hallType;
         if (isHall !== undefined) row.isHall = isHall;
         if (sceType !== undefined) row.sceType = sceType;
-        if (userId !== undefined) userId = "default";
+        //if (userId !== undefined) userId = "default";
         // 追加更新的数据到CSV文件
-        const csvRow = `${row.image},${hallType || row.hallType || 'null'},${isHall || row.isHall || 'null'},${sceType || row.sceType || 'null'},${userId}\n`;
+        const csvRow = `${row.image},${hallType || row.hallType || 'null'},${isHall || row.isHall || 'null'},${sceType || row.sceType || 'null'},${userId || 'unknown'}\n`;
         fs.appendFile(path.join(__dirname, "../", "updates.csv"), csvRow, err => {
             if (err) {
                 console.error('Error appending to CSV file:', err);
